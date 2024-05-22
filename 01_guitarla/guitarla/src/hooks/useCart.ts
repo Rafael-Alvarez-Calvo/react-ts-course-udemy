@@ -59,7 +59,7 @@ export const useCart = () => {
         clearAll || setCart(cart.length ? cart.filter(item => item.id !== idItem) : []);
     };
     
-    const substractItemFromCart = (index : TIndexMandatoryProps) =>{
+    const substractItemFromCart = (index : TIndexOtherProps) =>{
         const clonedCart = [...cart];
         
         clonedCart[index].quantity--;
@@ -70,7 +70,7 @@ export const useCart = () => {
 
     };
     
-    const sumItemToCart = ( index : TIndexMandatoryProps) =>{
+    const sumItemToCart = (index : TIndexOtherProps) =>{
         const clonedCart = [...cart];
 
         clonedCart[index].quantity < MAX_ITEMS && clonedCart[index].quantity++;

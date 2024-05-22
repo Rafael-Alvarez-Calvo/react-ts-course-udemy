@@ -21,11 +21,11 @@ type TCartProps = {
     total: number
 }
 
-type TMandatoryProps = {
+type TOtherProps = {
     index: number
 }
 
-type TIndexMandatoryProps = TMandatoryProps['index']
+type TIndexOtherProps = TOtherProps['index'];
 
 
 /*UTILITY TYPES */
