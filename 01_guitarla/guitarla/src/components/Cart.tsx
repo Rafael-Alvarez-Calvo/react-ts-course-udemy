@@ -1,6 +1,11 @@
-import { useEffect, useMemo, useState } from 'react';
-
-export const Cart = ({cart, deleteItemFromCart, substractItemFromCart, sumItemToCart, isEmptyCart, total}) => {
+export const Cart = ({
+        cart, 
+        deleteItemFromCart, 
+        substractItemFromCart, 
+        sumItemToCart, 
+        isEmptyCart, 
+        total
+    } : TCartProps) => {
 
     return (
         <div id="carrito" className="bg-white p-3">
@@ -33,7 +38,7 @@ export const Cart = ({cart, deleteItemFromCart, substractItemFromCart, sumItemTo
                                                 <button
                                                     type="button"
                                                     className="btn btn-dark"
-                                                    onClick={(event) => substractItemFromCart(event, index)}
+                                                    onClick={() => substractItemFromCart(index)}
                                                 >-</button>
 
                                                 <span>{quantity}</span>
@@ -41,13 +46,13 @@ export const Cart = ({cart, deleteItemFromCart, substractItemFromCart, sumItemTo
                                                 <button
                                                     type="button"
                                                     className="btn btn-dark"
-                                                    onClick={(event) => sumItemToCart(event, index)}
+                                                    onClick={() => sumItemToCart(index)}
                                                 >
                                                     +
                                                 </button>
                                             </td>
                                             <td>
-                                                <button className="btn btn-danger" type="button" onClick={(event) => deleteItemFromCart(id, false)}>
+                                                <button className="btn btn-danger" type="button" onClick={() => deleteItemFromCart(id, false)}>
                                                     X
                                                 </button>
                                             </td>
@@ -59,7 +64,7 @@ export const Cart = ({cart, deleteItemFromCart, substractItemFromCart, sumItemTo
                             </tbody>
                         </table>
                         <p className="text-end">Total pagar: <span className="fw-bold">{total}€</span></p>
-                        <button className="btn btn-dark w-100 mt-3 p-2" onClick={(event) => deleteItemFromCart(null, true)}>Vaciar Carrito</button>
+                        <button className="btn btn-dark w-100 mt-3 p-2" onClick={() => deleteItemFromCart(-1, true)}>Vaciar Carrito</button>
                     </>
                 )
             }

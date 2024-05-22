@@ -1,20 +1,17 @@
-import { useState } from 'react';
-import { Guitar } from './components/Guitar';
-import Header from './components/Header';
-import { useDatabase } from './hooks/useDatabase';
-import { useCart } from './hooks/useCart';
+import Header from './components/Header.tsx';
+import { Guitar } from './components/Guitar.tsx';
+import { useDatabase } from './hooks/useDatabase.ts';
+import { useCart } from './hooks/useCart.ts';
 
 function App() {
 
-  const { cart, setCart, addToCart, deleteItemFromCart, substractItemFromCart, sumItemToCart, isEmptyCart, total } = useCart();
-
+  const { cart, addToCart, deleteItemFromCart, substractItemFromCart, sumItemToCart, isEmptyCart, total } = useCart();
   const { db } = useDatabase();
 
   return (
     <>
       <Header 
         cart={cart} 
-        setCart={setCart} 
         deleteItemFromCart={deleteItemFromCart} 
         substractItemFromCart={substractItemFromCart} 
         sumItemToCart={sumItemToCart}
@@ -27,7 +24,11 @@ function App() {
 
         <div className="row mt-5">
           {db.map(guitar => (
-            <Guitar key={guitar.id} guitarData={guitar} addToCart={addToCart}/>
+            <Guitar 
+              key={guitar.id} 
+              guitarData={guitar} 
+              addToCart={addToCart}
+            />
           )
           )}
         </div>

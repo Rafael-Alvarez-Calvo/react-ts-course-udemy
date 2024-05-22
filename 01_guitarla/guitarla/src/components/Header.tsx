@@ -1,6 +1,13 @@
 import { Cart } from "./Cart";
 
-export default function Header({cart, setCart, deleteItemFromCart, substractItemFromCart, sumItemToCart, isEmptyCart, total}) {
+export default function Header({
+        cart, 
+        deleteItemFromCart, 
+        substractItemFromCart, 
+        sumItemToCart, 
+        isEmptyCart, 
+        total
+    } : TCartProps) {
 
     return (
         <header className="py-5 header">
@@ -17,7 +24,6 @@ export default function Header({cart, setCart, deleteItemFromCart, substractItem
                         >
                             <Cart 
                                 cart={cart} 
-                                setCart={setCart} 
                                 deleteItemFromCart={deleteItemFromCart} 
                                 substractItemFromCart={substractItemFromCart} 
                                 sumItemToCart={sumItemToCart}

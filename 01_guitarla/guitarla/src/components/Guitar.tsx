@@ -1,4 +1,9 @@
-export const Guitar = ({ guitarData, addToCart }) => {
+type GuitarProps = {
+    guitarData : TGuitar
+    addToCart : (item:TGuitar) => void
+}
+
+export const Guitar = ({ guitarData, addToCart } : GuitarProps) => {
 
     const {id, name, image, description, price} = guitarData;
 
@@ -14,7 +19,7 @@ export const Guitar = ({ guitarData, addToCart }) => {
                 <button 
                     type="button"
                     className="btn btn-dark w-100"
-                    onClick={(event) => addToCart(event, guitarData)}
+                    onClick={() => addToCart(guitarData)}
                 >Agregar al Carrito</button>
             </div>
         </div>

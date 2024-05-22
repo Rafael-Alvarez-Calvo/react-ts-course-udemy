@@ -1,9 +1,7 @@
 
-import React from 'react'
-
 export const useDatabase = () => {
 
-    const db = [
+    const db : TGuitar[] = [
         {
             id: 1,
             name: 'Lukather',

@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 
 export const useCart = () => {
 
-    const initialCart = () => {
+    const initialCart = () : TCartItem[] => {
         const localStorageCart = localStorage.getItem("cart");
         return localStorageCart ? JSON.parse(localStorageCart) : [];
     }
@@ -35,9 +35,7 @@ export const useCart = () => {
     const MIN_ITEMS = 0;
     const MAX_ITEMS = 10;
 
-    const addToCart = (event, guitarData) =>{
-
-        event.preventDefault();
+    const addToCart = (guitarData : TGuitar) =>{
 
         const itemAlreadyExistsIndex = cart.findIndex(item => item.id === guitarData.id);
         
@@ -49,20 +47,19 @@ export const useCart = () => {
             setCart(updatedCart);
 
         }else{
-            guitarData.quantity = 1;
-            setCart([...cart, guitarData]);
+            const itemWithQuanity : TCartItem = { ...guitarData, quantity: 1}
+            setCart([...cart, itemWithQuanity]);
         }
 
     }
 
-    const deleteItemFromCart = (idItem, clearAll) =>{
-
+    const deleteItemFromCart = (idItem : TGuitarID, clearAll: boolean) =>{
         clearAll && setCart([]);
+        
         clearAll || setCart(cart.length ? cart.filter(item => item.id !== idItem) : []);
     };
     
-    const substractItemFromCart = (event, index) =>{
-        event.preventDefault();
+    const substractItemFromCart = (index : TIndexMandatoryProps) =>{
         const clonedCart = [...cart];
         
         clonedCart[index].quantity--;
@@ -73,8 +70,7 @@ export const useCart = () => {
 
     };
     
-    const sumItemToCart = (event, index) =>{
-        event.preventDefault();
+    const sumItemToCart = ( index : TIndexMandatoryProps) =>{
         const clonedCart = [...cart];
 
         clonedCart[index].quantity < MAX_ITEMS && clonedCart[index].quantity++;
@@ -84,7 +80,6 @@ export const useCart = () => {
     
     return {
         cart,
-        setCart,
         addToCart,
         deleteItemFromCart,
         substractItemFromCart,
