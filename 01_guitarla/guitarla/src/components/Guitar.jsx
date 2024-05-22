@@ -1,30 +1,9 @@
-
-export const Guitar = ({guitarData, cart, setCart}) => {
+export const Guitar = ({ guitarData, addToCart }) => {
 
     const {id, name, image, description, price} = guitarData;
 
-    const addToCart = (event, guitarData) =>{
-
-        event.preventDefault();
-
-        const itemAlreadyExistsIndex = cart.findIndex(item => item.id === id);
-        
-        if(itemAlreadyExistsIndex > -1){
-
-            const updatedCart = [...cart];
-            updatedCart[itemAlreadyExistsIndex].quantity++
-
-            setCart(updatedCart);
-
-        }else{
-            guitarData.quantity = 1;
-            setCart([...cart, guitarData]);
-        }
-
-    }
-
     return (
-        <div id={name} className="col-md-6 col-lg-4 my-4 row align-items-center">
+        <div id={name + "-" + id.toString()} className="col-md-6 col-lg-4 my-4 row align-items-center">
             <div className="col-4">
                 <img className="img-fluid" src={`/img/${image}.jpg`} alt={`imagen de guitarra - ${name}`} />
             </div>
