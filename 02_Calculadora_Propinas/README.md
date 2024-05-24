@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Calculadora de Órdenes y Propinas para Restaurantes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene una aplicación web que permite a los usuarios calcular el total de su cuenta en un restaurante, incluyendo las órdenes seleccionadas y las propinas que deseen dejar. La aplicación está desarrollada con **React**, **TypeScript**, **Vite** y **Tailwind Css**, y hace un uso extensivo de hooks para gestionar el estado de las órdenes y el porcentaje de propinas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Selección de Órdenes**: Los usuarios pueden añadir y remover ítems de su orden.
+- **Cálculo de Propinas**: Permite establecer un porcentaje de propina y calcula automáticamente el subtotal, la propina y el total final.
+- **Interfaz Reactiva**: Uso de hooks para manejar el estado de las órdenes y las propinas.
+- **Estilos Modernos**: Estilizado con Tailwind CSS para un diseño moderno y responsivo.
+- **Rendimiento Optimizado**: Construida con Vite para una experiencia de desarrollo rápida y eficiente.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clonar el repositorio:
+    ```bash
+    git clone https://github.com/Rafael-Alvarez-Calvo/react-ts-course-udemy.git
+    cd 02_Calculadora_Propinas
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Instalar las dependencias:
+    ```bash
+    npm install
+    # o
+    yarn install
+    ```
+
+## Uso
+
+1. Iniciar la aplicación:
+    ```bash
+    npm run dev
+    # o
+    yarn dev
+    ```
+
+2. Abrir en tu navegador:
+    ```
+    http://localhost:3000
+    ```
+
+## Estructura del Proyecto
+
+- **components**: Componentes reutilizables como la lista de órdenes y el calculador de propinas.
+- **hooks**: Hooks personalizados para la gestión del estado de las órdenes y las propinas.
+- **pages**: Página principal de la aplicación.
+- **utils**: Tipos y utilidades varias.
+
+## Deployment
+
+El proyecto está subido a la plataforma de Netlify
+
+https://melodic-cucurucho-2f7c50.netlify.app
