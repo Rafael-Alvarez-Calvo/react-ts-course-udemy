@@ -3,7 +3,7 @@ import { useData } from "./hooks/useData";
 import useOrder from "./hooks/useOrder";
 import { Order } from "./components/Order/Order";
 
-function App() {
+export default function App() {
 
   const { menuItems } = useData();
 
@@ -31,5 +31,3 @@ function App() {
     </>
   )
 }
-
-export default App
