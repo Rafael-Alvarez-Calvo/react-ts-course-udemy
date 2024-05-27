@@ -51,3 +51,9 @@ La landing page muestra un grid dinámico de guitarras disponibles para la compr
 - **components**: Componentes reutilizables como el grid de guitarras y el carrito de compras.
 - **data**: base de datos/JSON sencilla en javascript.
 - **hooks**: Hooks personalizados para la lógica del carrito.
+
+## Deployment
+
+El proyecto está subido a la plataforma de Netlify
+
+https://velvety-puffpuff-9f877e.netlify.app

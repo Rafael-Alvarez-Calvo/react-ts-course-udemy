@@ -41,11 +41,6 @@ Este repositorio contiene una aplicación web que permite a los usuarios calcula
     yarn dev
     ```
 
-2. Abrir en tu navegador:
-    ```
-    http://localhost:3000
-    ```
-
 ## Estructura del Proyecto
 
 - **components**: Componentes reutilizables como la lista de órdenes y el calculador de propinas.
@@ -57,4 +52,4 @@ Este repositorio contiene una aplicación web que permite a los usuarios calcula
 
 El proyecto está subido a la plataforma de Netlify
 
-https://melodic-cucurucho-2f7c50.netlify.app
+https://sparkly-torrone-c8c2b0.netlify.app

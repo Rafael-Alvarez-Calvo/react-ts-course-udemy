@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Calculadora de Calorías
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación web que permite a los usuarios ingresar tanto comidas como ejercicios y calcula el total de calorías. Las calorías de las comidas se suman y las de los ejercicios se restan, proporcionando así un balance total de calorías. Las actividades se muestran dinámicamente en un grid y pueden ser editadas o eliminadas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Ingreso de Comidas y Ejercicios**: Añade comidas y ejercicios con sus respectivas calorías.
+- **Cálculo de Calorías**: Suma las calorías de las comidas y resta las de los ejercicios para obtener el total.
+- **Grid Dinámico**: Visualización interactiva de las actividades ingresadas.
+- **Edición y Eliminación**: Permite editar y eliminar actividades.
+- **Interfaz Moderna**: Utiliza Tailwind CSS y Heroicons para un diseño atractivo y responsivo.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Heroicons**
+- **uuidv4**
 
-- Configure the top-level `parserOptions` property like this:
+## Deployment
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+El proyecto está subido a la plataforma de Netlify
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+https://fanciful-moonbeam-74ca0b.netlify.app
