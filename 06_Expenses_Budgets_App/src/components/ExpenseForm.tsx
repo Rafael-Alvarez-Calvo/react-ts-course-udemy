@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
 import { categories } from "../data/categories"
 import { Value, TDraftExpense } from "../types"
 import DatePicker from "react-date-picker"
@@ -10,16 +10,29 @@ import { useBudget } from "../hooks/useBudget"
 
 export const ExpenseForm = () => {
 
-    const { dispatch } = useBudget();
+    const { state, dispatch, remainBudget } = useBudget();
 
     const [error, setError] = useState("");
+    const [prevAmount, setPrevAmount] = useState(0);
 
     const [expense, setExpense] = useState<TDraftExpense>({
         amount: 0,
         expenseName: "",
         category: "",
         date: new Date()
-    })
+    });
+
+    useEffect(() => {
+        if(state.editExpenseId){
+
+            const selectedElementToEdit: TDraftExpense = state.expenses.filter((expense) => expense.id === state.editExpenseId)[0];
+            
+            setExpense(selectedElementToEdit);
+            setPrevAmount(selectedElementToEdit.amount);
+        }
+
+    }, [state.editExpenseId])
+    
 
     const handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
         
@@ -53,20 +66,30 @@ export const ExpenseForm = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
+        debugger;
+
         if(Object.values(expense).indexOf("") > -1){
             setError("Todos los campos son obligatorios");
             return
+        }
+        
+        if((expense.amount - prevAmount) > remainBudget){
+            setError("Este gasto dejaría la cuenta al descubierto");
+            return
+        }
+        
+        if(state.editExpenseId){
+            dispatch({type: "update-expense", payload: {expense: { id: state.editExpenseId, ...expense}}})
 
         }else{
             dispatch({type: "add-expense", payload: {expense}})
             setError("");
         }
-
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <legend className="uppercase text-center text-2xl font-black border-b-4 border-blue-500 py-2">Nuevo Gasto</legend>
+            <legend className="uppercase text-center text-2xl font-black border-b-4 border-blue-500 py-2">{state.editExpenseId ? "Editar Gasto" : "Nuevo Gasto"}</legend>
 
             {error && <ErrorMessage>{error}</ErrorMessage>}
 
@@ -109,6 +132,7 @@ export const ExpenseForm = () => {
                     value={expense.category}
                     onChange={handleChange}
                 >
+                    <option value="">-- Selecciona una categoría --</option>
                     <OptionSelectCategories />
                 </select>
             </div>
@@ -129,7 +153,7 @@ export const ExpenseForm = () => {
             <input 
                 type="submit"
                 className="bg-blue-600 cursor-pointer w-full p-2 mt-8 text-white font-bold rounded-lg uppercase hover:bg-blue-900 active:bg-blue-900 transition-all disabled:opacity-50"
-                value="Añadir Gasto"
+                value={state.editExpenseId ? "Guardar" : "Añadir"}
             />
         </form>
     )

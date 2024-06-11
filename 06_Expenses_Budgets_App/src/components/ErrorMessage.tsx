@@ -1,7 +1,7 @@
-import { PropsWithChildren, ReactNode } from "react"
+import { ReactNode } from "react"
 
 type TErrorMessageProps = {
-    children: ReactNode
+    children: ReactNode // | PropsWithChildren
 }
 
 export const ErrorMessage = ({ children }: TErrorMessageProps) => {

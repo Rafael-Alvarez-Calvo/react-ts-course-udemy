@@ -1,7 +1,6 @@
 import { TCategory } from "../types";
 
 export const categories : TCategory[] = [
-    { id: '-1', name: '-- Selecciona una categoría --', icon: '' },
     { id: '1', name: 'Ahorro', icon: 'ahorro' },
     { id: '2', name: 'Comida', icon: 'comida' },
     { id: '3', name: 'Casa', icon: 'casa' },

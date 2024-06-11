@@ -12,7 +12,8 @@ export const useModal = (state: TBudgetState) => {
     const hideModal = () =>{
         return{
             ...state,
-            modal: false
+            modal: false,
+            editExpenseId: ""
         }
     }
     
