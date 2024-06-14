@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# Expense Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains an Expense Manager application built with React, TypeScript, Tailwind CSS, Vite, Context API, and useReducer. The application allows users to manage their budget, add expenses in different categories, edit expenses, and delete expenses, all while dynamically updating the global state managed by Context API. It also keeps track of the total expenses and available budget, even accounting for overspending.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Set Budget**: Define your total budget.
+- **Add Expenses**: Add expenses in various categories.
+- **Edit Expenses**: Modify existing expenses.
+- **Delete Expenses**: Remove expenses as needed.
+- **Dynamic Updates**: Real-time updates of totals and available budget.
+- **Overspending Alert**: Alerts when expenses exceed the budget.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React (ContextAPI, useReducer)**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **react-calendar**
+- **react-date-picker**
+- **react-circular-progressbar**
+- **react-swipeable-list**
+- **uuid**
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clonar el repositorio:
+    ```bash
+    git clone https://github.com/Rafael-Alvarez-Calvo/react-ts-course-udemy.git
+    cd 06_Expenses_Budgets_App
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Instalar las dependencias:
+    ```bash
+    npm install
+    # o
+    yarn install
+    ```
+
+## Uso
+
+1. Iniciar la aplicación:
+    ```bash
+    npm run dev
+    # o
+    yarn dev
+    ```
+
+## Project Structure
+
+- **components**: Reusable components like budget form, expense list, and expense form.
+- **context**: Context API implementation for global state management.
+- **hooks**: Custom hooks for budget management logic.
+- **pages**: Main pages of the application.
+- **reducers**: Reducers for handling state changes.
+- **utils**: Type definitions and utility functions.
+
+## Deployment
+
+El proyecto está subido a la plataforma de Netlify
+
+https://rococo-cassata-2ac39c.netlify.app
