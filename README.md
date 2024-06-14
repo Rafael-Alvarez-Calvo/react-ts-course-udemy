@@ -1,99 +1,99 @@
 # react-ts-course-udemy
 
-# Aprende React con TypeScript - Proyectos del Mundo Real
+# Learn React with TypeScript - Real World Projects
 
-¡Bienvenido al repositorio del curso realizado "Aprende React con TypeScript paso a paso creando proyectos del mundo real"!
+Welcome to the repository for the course "Learn React with TypeScript step by step by creating real world projects"!
 
-Este repositorio contiene todos los proyectos y ejemplos que se desarrollan durante el curso de Udemy.
+This repository contains all the projects and examples developed during the Udemy course.
 
 ---
 
-## Descripción del Curso
+## Course Description
 
-Curso dedicado a crear proyectos reales abarcando todo el ecosistema de React, desde los conceptos básicos hasta el uso de tecnologías avanzadas y la creación de aplicaciones Full Stack. Todos los proyectos incluyen **TypeScript** desde el inicio.
+This course is dedicated to creating real-world projects covering the entire React ecosystem, from basic concepts to advanced technologies and Full Stack applications. All projects include **TypeScript** from the start.
 
-### ¿Qué se desarrolló en el curso?
+### What was developed in the course?
 
-- **Fundamentos de React**: Componentes, Eventos, State.
-- **Hooks**: useState, useEffect, useMemo, useCallback, useReducer, y cómo crear tus propios hooks.
-- **TypeScript con React**: Mejora la robustez y mantenibilidad de tu código.
-- **Estado Global**: Uso de Context API y Zustand.
-- **Formularios**: React Hook Form, validación y procesamiento.
-- **Consumo de APIs**: Consultar APIs externas, validar y mostrar datos.
-- **Routing**: React Router DOM para aplicaciones multipágina.
-- **Full Stack**: Integración con backend usando PERN y MERN stack.
-- **Next.js**: Introducción a Next.js con Server Actions y más.
+- **React Fundamentals**: Components, Events, State.
+- **Hooks**: useState, useEffect, useMemo, useCallback, useReducer, and creating your own hooks.
+- **TypeScript with React**: Enhance code robustness and maintainability.
+- **Global State**: Using Context API and Zustand.
+- **Forms**: React Hook Form, validation, and processing.
+- **API Consumption**: Fetching external APIs, validating, and displaying data.
+- **Routing**: React Router DOM for multi-page applications.
+- **Full Stack**: Integration with backend using PERN and MERN stack.
+- **Next.js**: Introduction to Next.js with Server Actions and more.
 
 ### Instructor
 
 **Juan Pablo De la Torre Valdez**
 
-## Proyectos del Curso
+## Course Projects
 
-### Proyecto 01: Carrito de Compras
-Aprenderás los fundamentos de React mientras creas un carrito de compras real con cantidades, precios y más. Incluye la creación de hooks propios y la transición a TypeScript.
+### Project 01: Shopping Cart
+Learn React fundamentals while creating a real shopping cart with quantities, prices, and more. Includes creating custom hooks and transitioning to TypeScript.
 
-### Proyecto 02: Calculadora de Propinas y Consumos
-Ideal para restaurantes, este proyecto permite generar órdenes y seleccionar propinas.
+### Project 02: Tips and Orders Calculator
+Ideal for restaurants, this project allows generating orders and selecting tips.
 
-### Proyecto 03: Contador de Calorías y Ejercicios
-Procesamiento de formularios, validaciones y uso de useReducer para manejar estados complejos.
+### Project 03: Calories and Exercises Counter
+Form processing, validations, and using useReducer for managing complex states.
 
-### Proyecto 04: Migrar Carrito de Compras a useReducer
-Aprenderás a migrar un proyecto conocido a una nueva tecnología para entender mejor los conceptos.
+### Project 04: Migrate Shopping Cart to useReducer
+Learn to migrate a known project to a new technology for better concept understanding.
 
-### Proyecto 05: Migrar Calculadora de Propinas a useReducer
-Similar al anterior, pero con la calculadora de propinas.
+### Project 05: Migrate Tips Calculator to useReducer
+Similar to the previous one but with the tips calculator.
 
-### Proyecto 06: Control de Gastos y Presupuestos
-Uso de Context API para estado global, filtrado de gastos, calendario y gráficas.
+### Project 06: Expense and Budget Control
+Using Context API for global state, filtering expenses, calendar, and charts.
 
-### Proyecto 07: Administrador de Pacientes
-Uso de Zustand para estado global y React Hook Form para formularios.
+### Project 07: Patient Manager
+Using Zustand for global state and React Hook Form for forms.
 
-### Proyecto 08: Aplicación de Clima
-Primera aplicación que obtiene datos de una API, con validaciones y manejo de respuestas.
+### Project 08: Weather Application
+First application that fetches data from an API, with validations and response handling.
 
-### Proyecto 09: Cotizador de Criptomonedas
-Conexión a una API para obtener precios de criptomonedas, usando Zustand y Zod para validación.
+### Project 09: Cryptocurrency Quote
+Connecting to an API to get cryptocurrency prices, using Zustand and Zod for validation.
 
-### Proyecto 10: Buscador de Recetas
-Proyecto multipágina con React Router DOM y el Slice Pattern para múltiples stores de Zustand.
+### Project 10: Recipe Finder
+Multi-page project with React Router DOM and Slice Pattern for multiple Zustand stores.
 
-### Proyecto 11: Administrador de Productos
-Proyecto Full Stack con PERN stack, REST API, testing y documentación.
+### Project 11: Product Manager
+Full Stack project with PERN stack, REST API, testing, and documentation.
 
-### Proyecto 12: Administrador de Tareas y Proyectos
-Proyecto avanzado con MERN stack, autenticación robusta, roles de usuario, React Query y más.
+### Project 12: Task and Project Manager
+Advanced project with MERN stack, robust authentication, user roles, React Query, and more.
 
-### Proyecto 13: Quiosco de Comida
-Introducción a Next.js, Server Actions, Prisma, Zod, Zustand y Tailwind. Incluye CRUD completo y más.
-
----
-
-## Estructura del Repositorio
-
-Cada proyecto se encuentra en su propio directorio bajo la raíz del repositorio:
-
-Cada directorio contiene:
-
-- **Código fuente**: Todo el código del proyecto.
-- **Instrucciones**: Pasos para ejecutar el proyecto localmente.
-- **Documentación**: Archivos README específicos para cada proyecto con detalles adicionales.
+### Project 13: Food Kiosk
+Introduction to Next.js, Server Actions, Prisma, Zod, Zustand, and Tailwind. Includes complete CRUD and more.
 
 ---
 
-## Cómo Empezar
+## Repository Structure
 
-1. **Clonar el repositorio**:
+Each project is in its own directory under the repository root:
+
+Each directory contains:
+
+- **Source Code**: All project code.
+- **Instructions**: Steps to run the project locally.
+- **Documentation**: Specific README files for each project with additional details.
+
+---
+
+## Getting Started
+
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/Rafael-Alvarez-Calvo/react-ts-course-udemy.git
     ```
-2. **Navegar a un proyecto específico**:
+2. **Navigate to a specific project**:
     ```bash
-    cd Proyecto-01-Carrito-de-Compras
+    cd Project-01-Shopping-Cart
     ```
-3. **Instalar dependencias y ejecutar**:
+3. **Install dependencies and run**:
     ```bash
     npm install
     npm start
