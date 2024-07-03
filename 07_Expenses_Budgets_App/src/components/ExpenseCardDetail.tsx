@@ -15,7 +15,6 @@ type TExpenseCardDetailProps = {
 export const ExpenseCardDetail = ({ filteredExpenses }: TExpenseCardDetailProps) => {
 
     const { dispatch } = useBudget();
-    debugger;
 
     const leadinActions = (id: TExpense['id']) => (
 
@@ -38,7 +37,7 @@ export const ExpenseCardDetail = ({ filteredExpenses }: TExpenseCardDetailProps)
     return filteredExpenses.map(expense => {
 
         let categoryInfo = categories.filter(category => category.id === expense.category)[0];
-        debugger;
+
         return (
             <Fragment key={expense.id}>
                 <SwipeableList>

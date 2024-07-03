@@ -66,8 +66,6 @@ export const ExpenseForm = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        debugger;
-
         if(Object.values(expense).indexOf("") > -1){
             setError("Todos los campos son obligatorios");
             return
