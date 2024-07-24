@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src", // Ruta de donde coge los archivos ts para compilar
+        "outDir": "./dist", // Ruta donde se guardan los compilados
+        "lib": ["ESNext"],  // Librerias de js a la que queremos compilar ts
+        "target": "ESNext", // 
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "strict": false,  // en false es ts mas permisivo permite any en true es mas restrictivo
+        "sourceMap": true,  //va a crear archivos <nombrearchivo>.js.map para poder debuggear js
+        "esModuleInterop": true, // Permite incorporar alguna libreria externa que esté escrita en common js
+        "declaration": true,  // va a crear archivos <nombrearchivo>.d.ts con las declaraciones de ts
+        "experimentalDecorators": true, // Esto es para que typescript acepte los decoradores @ de sequelize
+        "emitDecoratorMetadata": true
+    },
+    "include": ["src/**/*.ts"]
+}
